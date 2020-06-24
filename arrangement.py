@@ -11,6 +11,13 @@ class Arrangement:
     def enhance(self, flower):
         self.__flowers.append(flower)
 
+    @property  # The flowers getter
+    def flowers(self):
+        try:
+            return self.__flowers  # Note there are 2 underscores here
+        except AttributeError:
+            return ""
+
 
 class ValentinesDayArrangement(Arrangement):
     def __init__(self):
@@ -22,6 +29,7 @@ class ValentinesDayArrangement(Arrangement):
                 self.flowers.add(flower)
         except AttributeError as ex:
             print(f'{flower} cannot be added to {self}')
+
 
 class MothersDayArrangement(Arrangement):
     def __init__(self):
