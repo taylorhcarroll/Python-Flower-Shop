@@ -5,17 +5,17 @@ class Flower:
         self.container_refridgerated = container
 
     def create_mothersDay(self):
-        self.stem_length = 7
+        self.stem_length = 4
         self.container_refridgerated = False
 
     def create_valentine(self):
-        self.stem_length = 4
+        self.stem_length = 7
         self.container_refridgerated = True
 
 
 class Rose(Flower):
-    def __init__(self, color):
-        super().__init__()
+    def __init__(self, length, container, color):
+        super().__init__(length, container)
         self.color = color
 
     def __str__(self):
@@ -23,8 +23,8 @@ class Rose(Flower):
 
 
 class Lilly(Flower):
-    def __init__(self, color):
-        super().__init__()
+    def __init__(self, length, container, color):
+        super().__init__(length, container)
         self.color = color
 
     def __str__(self):
